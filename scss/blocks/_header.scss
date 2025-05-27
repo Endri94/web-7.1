@@ -1,0 +1,135 @@
+.header {
+  background-image: linear-gradient(90deg, $color-free-speech-blue 0%, $color-portage 100%);
+
+  &__top {
+    padding: 12px 0;
+    border-bottom: 1px solid $color-white-alpha-20;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__link {
+    display: block;
+    color: $color-white;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    transition: color 0.3s ease;
+    outline: none;
+
+    &:hover {
+      color: $color-white-alpha-50;
+    }
+
+    &:focus {
+      color: $color-white-alpha-50;
+    }
+
+  }
+
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 19px 0;
+
+    @include vp-1023 {
+      padding: 15px 0;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+
+  &__image {
+    width: 170px;
+    height: 36px;
+
+    @include vp-1023 {
+      width: 36px;
+    }
+  }
+
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include vp-1023 {
+      gap: 18px;
+    }
+  }
+
+  &__button {
+    outline: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: $color-bunting;
+    color: $color-white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+
+    &[disabled] {
+      cursor: default;
+      color: $color-manatee;
+      background-color: $color-white-smoke;
+    }
+
+    &--qr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background: $color-blue-zodiac;
+      transition: all 0.3s ease;
+    }
+
+    &:focus {
+      background: $color-blue-zodiac;
+      transition: all 0.3s ease;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include vp-1023 {
+      display: flex;
+      height: 38px;
+      width: 38px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
